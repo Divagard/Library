@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'stdapp/base.html' %}
+    
+    {% block content %}
+        <h1> Student Details </h1>
+        <table border="3">
+            <thead>
+                <th>
+                    Register Number
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Department
+                </th>
+                <th>
+                    Branch
+                </th>
+                <th>
+                    college Name
+                </th>
+                <th>
+                    College Location
+                </th>
+
+            </thead>
+            
+            {% for sdd in std  %}
+            <tr>
+                <td>
+                    {{sdd.Register_Number}}
+                </td>
+                <td>
+                    {{sdd.Name}}
+                </td>
+                <td>
+                    {{sdd.Department}}
+                </td>
+                <td>
+                    {{sdd.Branch}}
+                </td>
+                <td>
+                    {{sdd.college_Name}}
+                </td>
+                <td>
+                    {{sdd.College_Location}}
+                </td>
+            </tr>
+                
+            {% endfor %}
+                
+            <tr></tr>
+
+        </table>
+   
+        <h1> Student Fees Details </h1>
+        <table border="3">
+            <thead>
+                <th>
+                    Register Number
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    College Fees
+                </th>
+                <th>
+                    Bus Fees
+                </th>
+                <th>
+                    Exam Fees
+                </th>
+                <th>
+                    Total Fees
+                </th>
+            </thead>
+            
+            {% for sfe in sfd %}
+            <tr>
+                <td>
+                    {{sfe.Register_Number}}
+                </td>
+                <td>
+                    {{sfe.Name}}
+                </td>
+                <td>
+                    {{sfe.College_Fees}}
+                </td>
+                <td>
+                    {{sfe.Bus_Fees}}
+                </td>
+                <td>
+                    {{sfe.Exam_Fees}}
+                </td>
+                <td>
+                    {{sfe.Total_Fees}}
+                </td>
+            </tr>
+                
+            {% endfor %}
+                
+
+        </table>
+        <a href="">click to home </a>
+         {% endblock content %}
+    
+</body>
+</html>
